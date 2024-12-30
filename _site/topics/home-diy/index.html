@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dispatch Designs</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <!-- Top navigation -->
+      <div class="top-nav">
+        <div class="search-container">
+          <input type="text" placeholder="Search... 🔍" />
+          <button class="search-btn">
+          </button>
+        </div>
+        <div class="logo">Dispatch Designs</div>
+        <button class="subscribe-btn">Subscribe</button>
+      </div>
+
+      <!-- Categories navigation -->
+      <nav class="categories-nav">
+        <ul class="categories-list">
+          <li><a href="/topics/design-tools/">Design Tools</a></li>
+          <li><a href="/topics/creative-tools/">Creative Tools</a></li>
+          <li><a href="/topics/home-diy/">Home & DIY</a></li>
+          <li><a href="/topics/art-supplies/">Art Supplies</a></li>
+          <li><a href="/topics/tech-gadgets/">Tech & Gadgets</a></li>
+          <li><a href="/topics/freelance-tips/">Freelance Tips</a></li>
+          <li><a href="/topics/books-movies/">Books & Movies</a></li>
+          <li><a href="/topics/wellness/">Wellness</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile hamburger menu -->
+      <button class="hamburger-menu" aria-label="Toggle Menu">
+        ☰
+      </button>
+      <nav class="mobile-menu">
+        <ul class="mobile-menu-list">
+          <li><a href="/topics/design-tools/">Design Tools</a></li>
+          <li><a href="/topics/creative-tools/">Creative Tools</a></li>
+          <li><a href="/topics/home-diy/">Home & DIY</a></li>
+          <li><a href="/topics/art-supplies/">Art Supplies</a></li>
+          <li><a href="/topics/tech-gadgets/">Tech & Gadgets</a></li>
+          <li><a href="/topics/freelance-tips/">Freelance Tips</a></li>
+          <li><a href="/topics/books-movies/">Books & Movies</a></li>
+          <li><a href="/topics/wellness/">Wellness</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Home &amp; DIY</h1>
+<p>Get inspired to renovate and decorate your space with our guides and product recommendations.</p>
+<h2>Featured Articles</h2>
+<ul>
+<li><a href="/topics/home-diy/best-power-tools/">Best Power Tools for DIY Projects</a></li>
+<li><a href="/topics/home-diy/tiny-home-design/">Tiny Home Design Tips</a></li>
+<li><a href="/topics/home-diy/sustainable-furniture/">Sustainable Furniture Ideas</a></li>
+</ul>
+
+    </main>
+    <script>
+      // JavaScript for mobile menu toggle
+      const hamburger = document.querySelector(".hamburger-menu");
+      const mobileMenu = document.querySelector(".mobile-menu");
+      hamburger.addEventListener("click", () => {
+        mobileMenu.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
