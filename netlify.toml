@@ -2,3 +2,14 @@
   node_version = "18"
   publish = "_site"
   command = "npx @11ty/eleventy"
+
+[build.environment]
+  NODE_ENV = "production"
+
+[build.cache]
+  paths = ["node_modules", ".cache"]
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
