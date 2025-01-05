@@ -17,7 +17,7 @@ module.exports = function(eleventyConfig) {
         dir: {
             input: "src",
             includes: "_includes", // This includes the "layouts" folder inside "_includes"
-            output: "public" // Default is "_site"
+            output: "_site" // Default is "_site"
         }
     };
 };
