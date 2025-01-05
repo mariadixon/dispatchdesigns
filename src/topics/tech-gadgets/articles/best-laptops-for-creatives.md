@@ -3,11 +3,10 @@ title: "Why the MacBook Pro is a Designer's Dream"
 author: "Jordan Chen"
 date: 2024-12-28
 category: Tech & Gadgets
-tags:
-  - MacBook
-  - Laptops
-  - Tech for Creatives
-summary: "Jordan Chen shares why the MacBook Pro remains a favorite among designers."
+image: ["/assets/images/macbook-pro-review-2025.png"]
+tags: ["feature", "design-tools", "MacBook", "Laptops", "Tech for Creatives"]
+summary: " shares why the MacBook Pro remains a favorite among designers."
+authorIcon: "/assets/images/jordan-chen.png" # Add the author's icon path here
 layout: layouts/base.njk
 ---
 

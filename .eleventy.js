@@ -1,22 +1,50 @@
 const markdownIt = require("markdown-it");
+const fetch = require('node-fetch'); // Required to use fetch in Node.js
+
 const markdownItOptions = {
     html: true
 };
 
-module.exports = function(eleventyConfig) {
-    // Copy static files to output
+module.exports = function (eleventyConfig) {
+    // Passthrough copy for static files
     eleventyConfig.addPassthroughCopy("css");
-    eleventyConfig.addPassthroughCopy("images");
+    eleventyConfig.addPassthroughCopy("assets/images");
     eleventyConfig.addPassthroughCopy("js");
     eleventyConfig.addPassthroughCopy("src/topics");
+    eleventyConfig.addPassthroughCopy("pagefind");
 
-    // Set Markdown library with options
+    // Markdown library options
     eleventyConfig.setLibrary("md", markdownIt(markdownItOptions));
+
+    // Example collection: Featured posts
+    eleventyConfig.addCollection("featured", (collectionApi) => {
+        return collectionApi.getAll()
+            .filter(item => item.data.tags && item.data.tags.includes("feature"))
+            .slice(0, 1); // Limit to one post
+    });
+
+    // Example collection: Authors
+    eleventyConfig.addCollection("authors", function (collectionApi) {
+        return collectionApi.getFilteredByGlob("./src/_data/authors/*.json");
+    });
+
+    // Fetching external data as a collection
+    // NEW ADDITION
+    eleventyConfig.addCollection("externalData", async function () {
+        try {
+            const response = await fetch("https://api.example.com/data");
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error("Error fetching external data:", error);
+            return [];
+        }
+    });
 
     return {
         dir: {
             input: "src",
-            includes: "_includes", // This includes the "layouts" folder inside "_includes"
+            includes: "_includes",
             output: "_site"
         }
     };

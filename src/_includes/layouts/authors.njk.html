@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ author.name }} | Dispatch Designs</title>
+</head>
+<body>
+  <header>
+    <h1>{{ author.name }}</h1>
+    <p>{{ author.title }}</p>
+    <img src="{{ author.image }}" alt="Photo of {{ author.name }}">
+  </header>
+  <main>
+    <p>{{ author.bio }}</p>
+    <h2>Posts by {{ author.name }}</h2>
+    <ul>
+      {% for post in collections.all %}
+        {% if post.data.author == author.name %}
+          <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </main>
+</body>
+</html>

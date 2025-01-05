@@ -1,0 +1,16 @@
+// Generate search.json after build
+eleventyConfig.on("eleventy.after", ({ collections }) => {
+    const searchIndex = collections.all.map(item => {
+        if (item.data && item.data.title && item.data.summary) {
+            return {
+                title: item.data.title || "",
+                summary: item.data.summary || "",
+                url: item.url || ""
+            };
+        }
+        return null;
+    }).filter(Boolean); // Filter out null values
+
+    const fs = require("fs");
+    fs.writeFileSync("_site/search.json", JSON.stringify(searchIndex, null, 2));
+});
