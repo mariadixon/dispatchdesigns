@@ -1,5 +1,4 @@
 const markdownIt = require("markdown-it");
-const fetch = require('node-fetch'); // Required to use fetch in Node.js
 
 const markdownItOptions = {
     html: true
@@ -29,9 +28,9 @@ module.exports = function (eleventyConfig) {
     });
 
     // Fetching external data as a collection
-    // NEW ADDITION
     eleventyConfig.addCollection("externalData", async function () {
         try {
+            const fetch = (await import("node-fetch")).default; // Use dynamic import
             const response = await fetch("https://api.example.com/data");
             const data = await response.json();
             return data;
@@ -44,8 +43,8 @@ module.exports = function (eleventyConfig) {
     return {
         dir: {
             input: "src",
-            includes: "_includes", // This includes the "layouts" folder inside "_includes"
-            output: "_site" // Default is "_site"
+            includes: "_includes",
+            output: "_site"
         }
     };
 };
