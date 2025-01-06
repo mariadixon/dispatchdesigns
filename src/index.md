@@ -101,7 +101,7 @@ CENTER
 
 <footer class="site-footer">
   <div class="footer-content">
-    <!-- Newsletter Signup 
+    Newsletter Signup 
     <div class="newsletter">
       <p>Subscribe to our newsletter for the latest updates and recommendations.</p>
       <form action="#" method="post" class="newsletter-form">
