@@ -1,0 +1,67 @@
+{% extends "base.njk" %}
+
+{% block content %}
+  <article class="blogpost">
+    <!-- Blog Post Metadata -->
+    <meta name="description" content="{{ description | safe }}">
+    <meta name="keywords" content="{{ keywords | safe }}">
+    <meta property="og:title" content="{{ title | safe }}">
+    <meta property="og:description" content="{{ description | safe }}">
+    <meta property="og:image" content="{{ featuredImage | safe }}">
+    <meta property="og:type" content="article">
+
+    <!-- Breadcrumb for SEO -->
+    <nav class="breadcrumb">
+      <a href="/">Home</a> &raquo;
+      <a href="/topics/{{ category | slugify }}/">{{ category }}</a> &raquo;
+      <span>{{ title }}</span>
+    </nav>
+
+    <!-- Blog Post Header -->
+    <header class="blogpost-header">
+      <h1>{{ title }}</h1>
+      <p class="blogpost-meta">
+        Published on {{ date | date("MMMM D, YYYY") }} in <a href="/topics/{{ category | slugify }}/">{{ category }}</a>
+      </p>
+    </header>
+
+    <!-- Featured Image for Pinterest -->
+    <div class="blogpost-image">
+      <img src="{{ featuredImage }}" alt="{{ title }}" style="aspect-ratio: 2/3;">
+      <button class="pinterest-save-button" data-pin-do="buttonPin" data-pin-url="{{ url }}" data-pin-media="{{ featuredImage }}" data-pin-description="{{ description }}">
+        Save to Pinterest
+      </button>
+    </div>
+
+    <!-- Blog Post Content -->
+    <section class="blogpost-content">
+      {{ content | safe }}
+    </section>
+
+    <!-- Call-to-Action for Affiliate Product -->
+    <aside class="affiliate-call-to-action">
+      <p>Looking for the products mentioned in this post? Check out our affiliate links below:</p>
+      <a href="{{ affiliateLink }}" class="cta-button">Shop Now</a>
+    </aside>
+
+    <!-- Social Sharing Buttons -->
+    <section class="social-share">
+      <p>Share this post:</p>
+      <ul>
+        <li><a href="https://www.pinterest.com/pin/create/button/?url={{ url }}&media={{ featuredImage }}&description={{ description }}" target="_blank">Pinterest</a></li>
+        <li><a href="https://twitter.com/intent/tweet?url={{ url }}&text={{ title }}" target="_blank">Twitter</a></li>
+        <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ url }}" target="_blank">Facebook</a></li>
+      </ul>
+    </section>
+
+    <!-- Related Posts -->
+    <section class="related-posts">
+      <h2>Related Posts</h2>
+      <ul>
+        {% for post in relatedPosts %}
+          <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </section>
+  </article>
+{% endblock %}

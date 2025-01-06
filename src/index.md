@@ -66,9 +66,10 @@ layout: layouts/base.njk
 </section>
 
 <hr />
-
+<!--
 <section class="deals-section">
   <div class="deals-column leftd-column">
+
 
 LEFT
 
@@ -106,10 +107,10 @@ CENTER
       <form action="#" method="post" class="newsletter-form">
         <input type="email" name="email" placeholder="Enter your email" required>
         <button type="submit">Subscribe</button>
-      </form>-->
+      </form>
     </div>
 
-
+-->
 
   </div>
   <div class="footer-bottom">

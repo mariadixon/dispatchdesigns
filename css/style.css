@@ -1110,4 +1110,152 @@ ol ul {
         margin-bottom: 10px !important;
         width: 100% !important;
       }
-    
+    /* end of mailing list */
+
+    /* Blog Post Styles */
+.blog-post {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.blog-post .meta {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.blog-post .content img {
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 2/3;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.blog-post .content p {
+    margin-bottom: 20px;
+}
+
+/* Affiliate Section */
+.affiliate-section {
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.affiliate-section a {
+    display: inline-block;
+    background-color: #0073e6;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.affiliate-section a:hover {
+    background-color: #005bb5;
+}
+
+/* Pinterest Button */
+.pinterest-button {
+    display: inline-block;
+    background-color: #bd081c;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.pinterest-button:hover {
+    background-color: #930614;
+}
+
+/* Social Sharing */
+.social-sharing {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.social-sharing a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+.social-sharing .twitter {
+    background-color: #1DA1F2;
+}
+
+.social-sharing .facebook {
+    background-color: #1877F2;
+}
+
+.social-sharing .pinterest {
+    background-color: #BD081C;
+}
+
+/* Related Posts */
+.related-posts {
+    margin-top: 30px;
+}
+
+.related-posts h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.related-posts ul {
+    list-style: none;
+    padding: 0;
+}
+
+.related-posts li {
+    margin-bottom: 10px;
+}
+
+.related-posts li a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+.related-posts li a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        padding: 15px;
+    }
+
+    .blog-post h1 {
+        font-size: 1.5rem;
+    }
+
+    .social-sharing {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-sharing a {
+        margin-bottom: 10px;
+    }
+}
+
