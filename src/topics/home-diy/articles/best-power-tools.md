@@ -5,7 +5,7 @@ date: "2025-01-06"
 tags: ["DIY", "Power Tools", "Makita", "Featured"]
 image: "/assets/images/best-power-tools.jpg" # Add your featured image URL
 summary: "Explore the best Makita power tools for DIY enthusiasts. From cordless drills to circular saws, these tools help you tackle any project with ease."
-layout: "blogpost.njk"
+layout: "layouts/blogpost.njk"
 ---
 
 Whether you're a seasoned DIY enthusiast or just starting out, having the right tools can make or break your project. Over the years, I’ve learned the value of investing in reliable, high-quality tools—and sticking with one trusted brand. For me, that brand is Makita. One of the biggest perks? Makita’s tools share the same battery system, meaning you can switch batteries between tools, saving time and money.
